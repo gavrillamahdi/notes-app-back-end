@@ -2,6 +2,7 @@ const {
   addNoteHandler,
   getAllNotesHandler,
   getNoteByIdHandler,
+  editNoteByIdHandler,
 } = require('./handler');
 
 module.exports = [
@@ -19,5 +20,10 @@ module.exports = [
     method: 'GET',
     path: '/notes/{id}',
     handler: getNoteByIdHandler,
+  },
+  {
+    method: 'PUT',
+    path: '/notes/{id}',
+    handler: editNoteByIdHandler,
   },
 ];
